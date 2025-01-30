@@ -19,6 +19,7 @@ Welcome to the repository "Programovani v Pythonu"! This repository provides a b
 3. Open files and study the provided code examples.
 
 ## Author
-This repository was created and maintained by [Oleksii Shevchenko](https://shevchenkool.github.io/portfolio/). Questions, suggestions and feedback can be directed to [email](uzlabini@gmail.com) or [linkedin profile](linkedin.com/in/oleksii-shevchenko-535ab61b8).
-If you have any questions or suggestions, feel free to create an issue or submit a pull request.
+This repository was created and is maintained by [Oleksii Shevchenko](https://shevchenkool.github.io/portfolio/). For questions, suggestions, or feedback, please reach out via [email](mailto:uzlabini@gmail.com) or connect on [LinkedIn](https://linkedin.com/in/oleksii-shevchenko-535ab61b8). 
+
+If you have any questions or suggestions, feel free to create an [issue](https://github.com/ShevchenkoOl/Web-Automation-Dev/issues) or submit a [pull request](https://github.com/ShevchenkoOl/Web-Automation-Dev/pulls).
 **Best of luck with learning Python!**
