@@ -210,3 +210,90 @@
 #     "zážitková první pomoc",
 #     ]
 # print(statistics.mode(votes)) # curling
+
+
+
+
+#----------------------------------Další příklady na procvičení Cvičení 1 Průměrné teploty
+# Vytvořte reprezentaci této tabulky pomocí seznamu seznamů:
+# Varianta 1:
+# obsahuje řádky tabulky jako dvouprvkové seznamy // содержит строки таблицы в виде двухэлементных списков
+# radky = [
+#     [2001, 7.8],
+#     [2002, 8.7],
+#     [2003, 8.2],
+#     [2004, 7.8],
+#     [2005, 7.7],
+#     [2006, 8.2],
+#     [2007, 9.1],
+#     [2008, 8.9],
+#     [2009, 8.4],
+#     [2010, 7.2]
+# ]
+
+# # print(radky) # [[2001, 7.8], [2002, 8.7], [2003, 8.2], [2004, 7.8], [2005, 7.7], [2006, 8.2], [2007, 9.1], [2008, 8.9], [2009, 8.4], [2010, 7.2]]
+# # Získejte teplotu na třetím řádku tabulky:
+# print(radky[2][1]) # 8.2
+
+# #Získejte rok na pátém řádku tabulky:
+# print(radky[4][0]) # 2005
+
+# # Získejte poslední řádek tabulky jako seznam:
+# print(radky[-1])           # [2010, 7.2]
+# print(radky[len(radky)-1]) # [2010, 7.2]
+
+# # Vytvořte tabulku bez prvních dvou řádků:
+# print(radky[2:]) # [[2003, 8.2], [2004, 7.8], [2005, 7.7], [2006, 8.2], [2007, 9.1], [2008, 8.9], [2009, 8.4], [2010, 7.2]]
+
+# # Vytvořte tabulku pouze z prvních dvou řádků:
+# print(radky[:2]) # [[2001, 7.8], [2002, 8.7]]
+
+# # Vytvořte tabulku obsahující jen řádky 5, 6, 7, 8 (myšleno při "lidském" číslování, tj. od 1):
+# print(radky[4:8]) # [[2005, 7.7], [2006, 8.2], [2007, 9.1], [2008, 8.9]]
+
+# # Použitím proměnné sloupce vypište seznam teplot seřazený vzestupně podle velikosti:
+
+
+# Varianta 2:
+# roky = [radek[0] for radek in radky]
+# teploty = [radek[1] for radek in radky]
+# sloupce = [roky, teploty]
+
+# print(roky)    # [2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010]
+# print(teploty) # [7.8, 8.7, 8.2, 7.8, 7.7, 8.2, 9.1, 8.9, 8.4, 7.2]
+# print(sloupce)   # [[2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010], [7.8, 8.7, 8.2, 7.8, 7.7, 8.2, 9.1, 8.9, 8.4, 7.2]]
+
+
+# # Získejte teplotu na třetím řádku tabulky:
+# print(teploty[2]) # 8.2
+
+# # #Získejte rok na pátém řádku tabulky:
+# # print(roky[4])   # 2005
+
+# # Získejte poslední řádek tabulky jako seznam:
+# print([sloupce[0][-1], sloupce[1][-1]]) # [2010, 7.2]
+
+# # Vytvořte tabulku bez prvních dvou řádků:
+# print([sloupce[0][2:], sloupce[1][2:]]) # [[2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010], [8.2, 7.8, 7.7, 8.2, 9.1, 8.9, 8.4, 7.2]]
+
+# # Vytvořte tabulku pouze z prvních dvou řádků:
+# print([sloupce[0][:2], sloupce[1][:2]]) # [[2001, 2002], [7.8, 8.7]]
+
+# # Vytvořte tabulku obsahující jen řádky 5, 6, 7, 8 (myšleno při "lidském" číslování, tj. od 1):
+# print([sloupce[0][4:8], sloupce[1][4:8]]) # [[2005, 2006, 2007, 2008], [7.7, 8.2, 9.1, 8.9]]
+
+# # Použitím proměnné sloupce vypište seznam teplot seřazený vzestupně podle velikosti:
+# print(sorted(sloupce[1])) #[7.2, 7.7, 7.8, 7.8, 8.2, 8.2, 8.4, 8.7, 8.9, 9.1]
+
+
+
+
+#----------------------------------Další příklady na procvičení Cvičení 2 Známky z písemek
+# dvourozměrného seznamu // двумерный список
+studenty = [
+    ["A", [9, 7, 8, 5]],
+    ["B", [5, 3, 6, 6]],
+    ["C", [8, 4, 9, 7]],
+    ["D", [8, 5, 4, 8]],
+    ["E", [10, 6, 10, 7]]
+]
