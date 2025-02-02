@@ -10,3 +10,17 @@ print(type(3.5))    # <class 'float'>
 text = 'Here is some random text'
 print(text.find('h'))  # -1
 print(text.find('H'))  # 0 - toto je indexové číslo, kde se dané písmeno nachází
+
+radky = [
+    [2001, 7.8],
+    [2002, 8.7],
+    [2003, 8.2],
+    [2004, 7.8],
+    [2005, 7.7],
+    [2006, 8.2],
+    [2007, 9.1],
+    [2008, 8.9],
+    [2009, 8.4],
+    [2010, 7.2]
+]
+print(radky[-1]) # [2010, 7.2] - posledni prvek seznamu

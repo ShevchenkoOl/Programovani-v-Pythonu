@@ -289,7 +289,7 @@
 
 
 #----------------------------------Další příklady na procvičení Cvičení 2 Známky z písemek
-# dvourozměrného seznamu // двумерный список
+# 1. dvourozměrného seznamu // двумерный список
 studenty = [
     ["A", [9, 7, 8, 5]],
     ["B", [5, 3, 6, 6]],
@@ -297,3 +297,11 @@ studenty = [
     ["D", [8, 5, 4, 8]],
     ["E", [10, 6, 10, 7]]
 ]
+
+# 2. Spočítej známku jednotlivých studentů:
+for student in studenty:
+    total = sum(student[1])
+    print(f'student {student[0]}, ma celkem {total}')
+    if total >= 33:
+        new_seznam = ["36 a vice", total]
+    else: print('Nothing')
