@@ -3,11 +3,11 @@ Welcome to the repository "Programovani v Pythonu"! This repository provides a b
 
 ## Course Content
 
-1. **Slicing, metody, moduly:** Now we'll actually start programming and try out the first Python commands.
+1. **Slicing, metody, moduly:** now we'll actually start programming and try out the first Python commands.
       Čísla a řetězce
       Nyní už skutečně začneme programovat a vyzkoušíme si první příkazy v jazyce Python.
 
-2.
+2. **Function:** optional function attributes. how to create a function, how to pass parameters, how to call it.
 3.   
 
 ## How to Use the Repository
