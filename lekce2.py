@@ -98,3 +98,21 @@
 #     print(f' {"*" * length}\n * {slovo} *\n {"*" * length}')
 # obal(word)
 
+
+
+# #-------------------------Bonusová cvičení 1 Hotel
+# def total_price(person, breakfast=False):
+#     if breakfast:
+#         return(person * 975)
+#     else:
+#         return(person * 850)
+# print(total_price(1))
+
+
+#-------------------------Bonusová cvičení 2 Zarovnání výpisu
+numbers = [7728, 88, 958621, 5941, 959847272, 3944, 80, 521, 57035, 3967894]
+max = len(str(max(numbers)))
+def zarovani(number):
+    for number in numbers:
+        # if str(number) <= max:
+       print(number)
