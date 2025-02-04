@@ -92,8 +92,9 @@
 # word = input("Zadei slovo ")
 # def obal(slovo):
 #     length = len(slovo) + 4
-#     print("*" * length)
-#     print(f'* {slovo} *')
-#     print("*" * length)
+#     # print("*" * length)
+#     # print(f'* {slovo} *')
+#     # print("*" * length)
+#     print(f' {"*" * length}\n * {slovo} *\n {"*" * length}')
 # obal(word)
 
