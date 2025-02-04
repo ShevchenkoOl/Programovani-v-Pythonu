@@ -80,3 +80,20 @@
 # def fahrenheit_na_celsia(teplota):
 #     return((teplota - 32) * 5 / 9)
 # print(fahrenheit_na_celsia(20))  # -6.6666666
+
+
+#-------------------------Bonusy Cvičení 3 Měsíc narození
+# def month_of_birth(rodne_cislo):
+#     return str(rodne_cislo)[3]
+# print(month_of_birth(8507201439)) # 7
+
+
+#-------------------------Bonusy Cvičení 4 Rámeček
+# word = input("Zadei slovo ")
+# def obal(slovo):
+#     length = len(slovo) + 4
+#     print("*" * length)
+#     print(f'* {slovo} *')
+#     print("*" * length)
+# obal(word)
+
