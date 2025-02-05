@@ -48,12 +48,18 @@ print("slovo / jese odno slovo i / tak dalee".split("/")) # ['slovo ', ' jese od
 # print(" ".join(["John", "Peter", "Vicky"]))  # John Peter Vicky
 # print(" @".join(["John", "Peter", "Vicky"])) # John @Peter @Vicky
 # print(random.shuffle(radky))  # náhodně mění pozici položek seznamu
+# radky.append([2012, 8.6])  # přidá do seznamu radky
+
+
+
 
 
 
 # #---------------Numbers
 # import random
 # print(random.randint(0, 36))  # náhodné číslo od o do 36
+
+
 
 
 #--------------Vlastní funkce
@@ -75,3 +81,21 @@ print("slovo / jese odno slovo i / tak dalee".split("/")) # ['slovo ', ' jese od
 #     print(number * stringa)
 # test(5) # pokud nepředáme druhý parametr, bude to automaticky to, co je uvedeno v parametrech  - 55555
 # test(5, '*') # *****
+
+
+# funkci lze také volat iterací přes seznam:
+# def spocitej_pokutu(a, b):
+#   ...........
+
+# vazeni = [
+#     [4, 30],
+#     [2, 19],
+#     [3, 29],
+#     [3, 27],
+#     [5, 53],
+#     [5, 51],
+#     [2, 20],
+# ]
+
+# for index in vazeni:
+#     spocitej_pokutu(index[0], index[1])
