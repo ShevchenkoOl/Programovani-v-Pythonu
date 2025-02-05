@@ -48,6 +48,7 @@
 
 # Nepovinné parametry a typování (annotation)
 # Anotace parametrů funkce není povinná, pouze ukazuje vývojáři, jaký typ parametru funkce chce vidět.
-# def test(number: int, stringa: str = " "):  # nebo isOnline: boolean = True atd.
+# def test(number: int, stringa: str = "5"):  # nebo isOnline: boolean = True atd.
 #     print(number * stringa)
-# test(5) # pokud nepředáme druhý parametr, bude to automaticky to, co je uvedeno v parametrech
+# test(5) # pokud nepředáme druhý parametr, bude to automaticky to, co je uvedeno v parametrech  - 55555
+# test(5, '*') # *****
