@@ -30,7 +30,13 @@
 #     [2010, 7.2]
 # ]
 # print(radky[-1]) # [2010, 7.2] - posledni prvek seznamu
+# print(random.shuffle(radky))  # náhodně mění pozici položek seznamu
 
+
+
+# #---------------Numbers
+# import random
+# print(random.randint(0, 36))  # náhodné číslo od o do 36
 
 
 #--------------Vlastní funkce
