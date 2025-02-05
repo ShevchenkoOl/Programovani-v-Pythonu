@@ -154,3 +154,65 @@
 #     else:
 #         print('Bohužel jste prohráli, zkuste štěstí později((((')
 # roulette(rada, sazka)
+
+
+#-------------------------Bonusová cvičení 4 Zpřeházená písmena
+# import random
+# slovo = "shevchenko"
+# def zmatena_pismena(slovo):
+#     if len(slovo) <= 3:
+#        print(slovo)
+#     else:
+#         cast_slovo = list(slovo[1:-1])
+#         random.shuffle(cast_slovo)
+#         zmatene_slovo = slovo[0] + ''.join(cast_slovo) + slovo[-1]
+#         print(zmatene_slovo)
+# zmatena_pismena(slovo)   # sevnhkhceo
+
+#----Pro celu vetu:
+# import random
+# veta = "Slovo je stále možné pohodlně přečíst, když jsou pomíchaná písmena. Stačí, když první a poslední písmeno je na své pozici zachováno. Napiš funkci, která bude mít jako vstupní parametr slovo a vrátí slovo, kde zpřehází všechny znaky kromě prvního a posledního"
+# def zmatena_pismena(veta):
+#     nova_veta = []
+#     for slovo in veta.split(' '):
+#         if len(slovo) >= 3:
+#            cast_slovo = list(slovo[1:-1])
+#            random.shuffle(cast_slovo)
+#            zmatene_slovo = slovo[0] + ''.join(cast_slovo) + slovo[-1]
+#            nova_veta.append(zmatene_slovo)
+#     print(" ".join(nova_veta))
+# zmatena_pismena(veta)
+
+
+
+#-------------------------Bonusová cvičení 5 Nápravy
+# def spocitej_pokutu(pocet_naprav , hmotnost):
+#     if pocet_naprav == 2:
+#        pokuta = 18 - hmotnost
+#     elif pocet_naprav == 3:
+#         pokuta = 25 - hmotnost
+#     elif pocet_naprav == 4:
+#         pokuta = 32 - hmotnost
+#     elif pocet_naprav == 5:
+#         pokuta = 48 - hmotnost
+#     else: 
+#         return None
+    
+#     if pokuta >= 0:
+#           print("Gratuluji, vase hmotnost je povolena")
+#     else:
+#           pokuta = pokuta * (-1000)
+#           print(pokuta)
+
+# vazeni = [
+#     [4, 30],
+#     [2, 19],
+#     [3, 29],
+#     [3, 27],
+#     [5, 53],
+#     [5, 51],
+#     [2, 20],
+# ]
+
+# for index in vazeni:
+#     spocitej_pokutu(index[0], index[1])
