@@ -84,8 +84,12 @@
 
 #-------------------------Bonusy Cvičení 3 Měsíc narození
 # def month_of_birth(rodne_cislo):
-#     return str(rodne_cislo)[3]
-# print(month_of_birth(8507201439)) # 7
+#     if str(rodne_cislo)[2] in ("0", "5"):  # zkontrolujeme, zda je druhá pozice 0 nebo 5
+#         return str(rodne_cislo)[3] 
+#     else:
+#         return ("1" + str(rodne_cislo)[3]) 
+
+# print(month_of_birth(8561201439))  # Výstup: 11
 
 
 #-------------------------Bonusy Cvičení 4 Rámeček
@@ -109,17 +113,8 @@
 # print(total_price(1))
 
 
-#-------------------------Bonusová cvičení 2 Zarovnání výpisu
-# numbers = [7728, 88, 958621, 5941, 959847272, 3944, 80, 521, 57035, 3967894]
-# max = len(str(max(numbers)))   # Zjiskame kolik znaků zabírá nejdelší číslo ze seznamu
-# def zarovani(number: str, znak: str = ' '): # druhý parametr, pokud jej neuvedeme, bude mezera
-#     for number in numbers:
-#         print(str(number).rjust(max, znak))
-# zarovani(numbers)       # výsledek bude s mezerou
-# zarovani(numbers, '*')  # výsledek bude s *
 
-
-#-------------------------Bonusová cvičení 3 Ruleta
+#-------------------------Bonusová cvičení 2 Ruleta
 # import random
 # rad1 = [1, 4, 7, 10, 13, 16, 19, 22, 25, 28, 31, 34]
 # rad2 = [2, 5, 8, 11, 14, 17, 20, 23, 26, 29, 32, 35]
@@ -154,6 +149,17 @@
 #     else:
 #         print('Bohužel jste prohráli, zkuste štěstí později((((')
 # roulette(rada, sazka)
+
+
+#-------------------------Bonusová cvičení 3 Zarovnání výpisu
+# numbers = [7728, 88, 958621, 5941, 959847272, 3944, 80, 521, 57035, 3967894]
+# max = len(str(max(numbers)))   # Zjiskame kolik znaků zabírá nejdelší číslo ze seznamu
+# def zarovani(number: str, znak: str = ' '): # druhý parametr, pokud jej neuvedeme, bude mezera
+#     for number in numbers:
+#         print(str(number).rjust(max, znak))
+# zarovani(numbers)       # výsledek bude s mezerou
+# zarovani(numbers, '*')  # výsledek bude s *
+
 
 
 #-------------------------Bonusová cvičení 4 Zpřeházená písmena
