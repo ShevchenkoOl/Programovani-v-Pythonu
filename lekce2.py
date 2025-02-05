@@ -110,9 +110,10 @@
 
 
 #-------------------------Bonusová cvičení 2 Zarovnání výpisu
-numbers = [7728, 88, 958621, 5941, 959847272, 3944, 80, 521, 57035, 3967894]
-max = len(str(max(numbers)))
-def zarovani(number):
-    for number in numbers:
-        # if str(number) <= max:
-       print(number)
+# numbers = [7728, 88, 958621, 5941, 959847272, 3944, 80, 521, 57035, 3967894]
+# max = len(str(max(numbers)))   # Zjiskame kolik znaků zabírá nejdelší číslo ze seznamu
+# def zarovani(number: str, znak: str = ' '): # druhý parametr, pokud jej neuvedeme, bude mezera
+#     for number in numbers:
+#         print(str(number).rjust(max, znak))
+# zarovani(numbers)       # výsledek bude s mezerou
+# zarovani(numbers, '*')  # výsledek bude s *
