@@ -117,3 +117,40 @@
 #         print(str(number).rjust(max, znak))
 # zarovani(numbers)       # výsledek bude s mezerou
 # zarovani(numbers, '*')  # výsledek bude s *
+
+
+#-------------------------Bonusová cvičení 3 Ruleta
+# import random
+# rad1 = [1, 4, 7, 10, 13, 16, 19, 22, 25, 28, 31, 34]
+# rad2 = [2, 5, 8, 11, 14, 17, 20, 23, 26, 29, 32, 35]
+# rad3 = [3, 6, 9, 12, 15, 18, 21, 24, 27, 30, 33, 36]
+# print("Máme tři řady čísel: \n - první řada (hodnoty 1, 4, 7 atd.);\n - druhá řada (hodnoty 2, 5, 8 atd.);\n - třetí řada (hodnoty 3, 6, 9 atd.).")
+# rada = int(input("Zadejte prosím číslo řádku od 1 do 3, na který chcete vsadit: "))
+# sazka = float(input("Uveďte prosím částku sázky, kterou chcete vložit: "))
+# def roulette(cislo_rady, sazka):
+#     vypadlo = random.randint(0, 36)
+#     print(f'Vypadlo cislo: {vypadlo}')
+
+# # pokud padne 0, uživatel vždy prohrává.
+#     if vypadlo == 0:
+#         print('Bohužel výpadlo 0, nikdo nevyhrál!')
+#         return
+# # nebo kdyz vydere 0:
+#     if vypadlo == 0 and cislo_rady == 0:
+#         print(f'Jupiiii, jste vyhral {sazka * 5} cze)))))')
+#         return
+
+#     if   vypadlo in rad1:
+#          vyhral_rad = 1
+#     elif vypadlo in rad2:
+#          vyhral_rad = 1
+#     elif vypadlo in rad2:
+#          vyhral_rad = 3
+#     else: 
+#          vyhral_rad = None
+
+#     if cislo_rady == vyhral_rad:
+#        print(f'Jupiiii, jste vyhral {sazka * 2} cze)))))')
+#     else:
+#         print('Bohužel jste prohráli, zkuste štěstí později((((')
+# roulette(rada, sazka)
