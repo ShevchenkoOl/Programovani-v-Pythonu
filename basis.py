@@ -7,6 +7,13 @@
 # print(type(3.5))    # <class 'float'>
 '''
 Aritmetické operátory
+operátor přiřazení = 
+rovnat se ==
+ne rovna se !=
+větší než > 
+menší než <
+větší nebo rovno >=
+menší nebo rovno <=
 sčítání: +
 odčítání: -
 násobení: *
