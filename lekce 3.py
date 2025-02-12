@@ -32,21 +32,18 @@ s = set(t)
 print(s)     # {1, 2, 3}
 
 
-#----------------------------- Cvičení 1 Množiny
-text = '''Prágl                                                                    # Použití trojitých uvozovek ''' nebo """ se používá k přenosu velkých textů při zachování jejich struktury
-Prágl, po anglánsku Prague nebo Praha nebo v Cajsku, je taková lochna              # pokud použijeme print(text), text bude vytištěn přesně v zadaném formátu, se zachováním odstavců a pomlček
+#----------------------------- Cvičení 1 Množiny                                             # Použití trojitých uvozovek ''' nebo """ se používá k přenosu velkých textů při zachování jejich struktury
+text = """Prágl, po anglánsku Prague nebo Praha nebo v Cajsku, je taková lochna              # pokud použijeme print(text), text bude vytištěn přesně v zadaném formátu, se zachováním odstavců a pomlček
 v tem kuse hródy někde za čárama naši domoviny, kde se zoncna už
 nechláme a kde se prndá po cajzlovsku. A ještě k temu tam majó sicnu
 těžcí papaláši, kvůli čemu ho má každé v láfu jako kaktus ve véfuku.
-Z Práglu bere kramále aj ten jejich len kerému se péruje Vltava.
-
-O Práglu se taky kóří, pač tam majó hafo retychů pro všecky. Kromě
+Z Práglu bere kramále aj ten jejich len kerému se péruje Vltava. O Práglu se taky kóří, pač tam majó hafo retychů pro všecky. Kromě
 bůry švédských retychů só aj dva v Olmecu a jeden v Bučovicách.
 To my z našeho štatlu radši hážem lulec do kašny na Zelňáku. Když
 ale nekdo vopruboval zašrajbčit náš barocké Parnas do cancu retychů
 pro všecky, přišmrdolili se ti Švédi s tým, že só proti a hókajó po
 celé hródě, že ta vasra v tem se dá chlemtat.
-'''
+"""
 
 novySet = set(text)
 print(len(novySet), novySet)     # 49 {'b', 'ý', 'Š', 'l', 'š', 'á', 'T', '\n', 'ž', 'A', 'o', ',', 'k', 't', 'ó', 'P', 'g', 'r', 'p', 'z', 'Z', 'O', 'd', 'a', 's', 'n', 'u', 'K', 'ň', 'v', 'V', 'e', 'ě', 'j', 'm', 'č', 'B', 'é', 'ř', '.', 'ů', 'c', 'i', 'h', 'y', 'C', ' ', 'í', 'f'}
