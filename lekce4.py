@@ -1,60 +1,223 @@
 #------------------------------Lekce 4 Objektově orientované programování v Pythonu 
-#---------------------------------------Objekty
-class Employee:
-    def __init__(self, name, position, holiday_entitlement):      # __init__ Метод __init__ в Python — это специальный метод, который называется конструктором класса. Он вызывается автоматически при создании нового объекта (экземпляра) этого класса. Основная цель __init__ — инициализация объекта, то есть присваивание начальных значений его атрибутам
-        self.name = name                                          # self self — это первый параметр всех методов класса в Python, который ссылается на текущий экземпляр объекта, для которого вызывается метод. Это своего рода указатель на сам объект.
-        self.position = position
-        self.holiday_entitlement = holiday_entitlement
-    def get__info(self):
-        return f"{self.name} pracuje na posice {self.position}." 
+#---------------------------------------Objekty a třídy
+# class Employee:
+#     def __init__(self, name, position, holiday_entitlement):      # __init__ Метод __init__ в Python — это специальный метод, который называется конструктором класса. Он вызывается автоматически при создании нового объекта (экземпляра) этого класса. Основная цель __init__ — инициализация объекта, то есть присваивание начальных значений его атрибутам
+#         self.name = name                                          # self — это первый параметр всех методов класса в Python, который ссылается на текущий экземпляр объекта, для которого вызывается метод. Это своего рода указатель на сам объект.
+#         self.position = position
+#         self.holiday_entitlement = holiday_entitlement
+#     def get__info(self):
+#         return f"{self.name} pracuje na posice {self.position}." 
     
-frantisek = Employee("Frantisek Novak", "konstrukter", 25)
-klara = Employee("Klara Navo", "konstrukterka", 25)
+# frantisek = Employee("Frantisek Novak", "konstrukter", 25)
+# klara = Employee("Klara Navo", "konstrukterka", 25)
 
-print(frantisek.name)           # Frantisek Novak
-print(frantisek.get__info())    # Frantisek Novak pracuje na posice konstrukter.
-print(klara.get__info())        # Klara Navo pracuje na posice konstrukterka.
+# print(frantisek.name)           # Frantisek Novak
+# print(frantisek.get__info())    # Frantisek Novak pracuje na posice konstrukter.
+# print(klara.get__info())        # Klara Navo pracuje na posice konstrukterka.
+
+
+# Příklady obslužných metod (začátek a konec se dvěma podtržítky):
+# __init__ — inicializace objektu (spuštění při vytváření).   — инициализация объекта (запуск при создании).
+# __str__ — řetězcová reprezentace objektu (jak bude vypadat při `print()`) —  строковое представление объекта (как будет выглядеть при `print()`).
+# __len__ — délka objektu (funguje s funkcí `len()`), používá se pouze pro typ int (číslo) — длина объекта (работает с функцией `len()`), используется только для типа int (число).
+# __add__ — přidání objektů (funguje s `+`), matematická metoda — сложение объектов (работает с `+`).
+
+#------------------------Příklady použití těchto metod
+# class Employee:
+#     def __init__(self, name, position, holiday_entitlement):
+#         self.name = name
+#         self.position = position
+#         self.holiday_entitlement = holiday_entitlement
+
+#     def __str__(self):
+#         return f"Zaměstnanec {self.name} pracuje na pozici {self.position}."
+        
+#     # def get_info(self):
+#     #     return f"Zaměstnanec {self.name} pracuje na pozici {self.position}."
+    
+#     def __len__(self):
+#         return self.holiday_entitlement
+        
+#     def take_holiday(self, days):
+#         if self.holiday_entitlement >= days:
+#            self.holiday_entitlement -= days
+#            return f"Užij si to."
+#         else:
+#             return f"Bohužel už máš nárok jen na {self.holiday_entitlement} dní."
+
+# frantisek = Employee("Frantisek Novak", "developer", 25)
+# print(frantisek.take_holiday(30)) # Bohužel už máš nárok jen na 25 dní.
+# print(frantisek)    # Zaměstnanec Frantisek Novak pracuje na pozici developer.
+# print(len(frantisek)) # 25
 
 #-----------------------------------Cvičení 1: Balík
-class Package:
-    def __init__(self, address, weight, state):
-        self.address = address
-        self.weight = weight
-        self.state = state
-    def get_info(self):
-        return f"Balík na adresu {self.address} má hmotnost {self.weight} kg, je ve stavu {self.state}."
-    def delivery_price(self):
-        if self.weight <= 10:
-            return 129
-        elif self.weight <= 20:
-            return 159
-        else:
-            return 359
+# class Package:
+#     def __init__(self, address, weight, state):
+#         self.address = address
+#         self.weight = weight
+#         self.state = state
+#     def get_info(self):
+#         return f"Balík na adresu {self.address} má hmotnost {self.weight} kg, je ve stavu {self.state}."
+#     def delivery_price(self):
+#         if self.weight <= 10:
+#             return 129
+#         elif self.weight <= 20:
+#             return 159
+#         else:
+#             return 359
         
-balik1 = Package("Ulice Smetanova 123", 2.5, "doručen")
-balik2 = Package("Ulice Smetanova 123", 15.5, "doručen")
+# balik1 = Package("Ulice Smetanova 123", 2.5, "doručen")
+# balik2 = Package("Ulice Smetanova 123", 15.5, "doručen")
     
-print(balik1.get_info())       # Balík na adresu Ulice Smetanova 123 má hmotnost 2.5 je ve stavu doručen.   
+# print(balik1.get_info())       # Balík na adresu Ulice Smetanova 123 má hmotnost 2.5 je ve stavu doručen.   
 
-print(f"Cena přepravy balíku 1: {balik1.delivery_price()} Kč")  # Cena přepravy balíku 1: 129 Kč
-print(f"Cena přepravy balíku 2: {balik2.delivery_price()} Kč")  # Cena přepravy balíku 2: 159 Kč
+# print(f"Cena přepravy balíku 1: {balik1.delivery_price()} Kč")  # Cena přepravy balíku 1: 129 Kč
+# print(f"Cena přepravy balíku 2: {balik2.delivery_price()} Kč")  # Cena přepravy balíku 2: 159 Kč
 
 
 
 #-----------------------------------Bonusy Cvičení 2: Kniha
-
-class Book:
-    def __init__(self, title, pages, price):
-        self.title = title
-        self.pages = pages
-        self.price = price
-    def get_info(self):
-        return f"Kniha '{self.title}' obsahuje {self.pages} stran a cena je {self.price} Kč."
-    def get_time_to_read(self, timer = 4):
-        totat_time = self.pages * timer
-        hours = totat_time // 60
-        min = totat_time % 60
-        return f"Kniha '{self.title}' budete číst za {hours} hodin a {min} minut."
+# class Book:
+#     def __init__(self, title, pages, price):
+#         self.title = title
+#         self.pages = pages
+#         self.price = price
+#     def get_info(self):
+#         return f"Kniha '{self.title}' obsahuje {self.pages} stran a cena je {self.price} Kč."
+#     def get_time_to_read(self, timer = 4):    # timer = 4 - nepovinný parametr
+#         totat_time = self.pages * timer
+#         hours = totat_time // 60
+#         min = totat_time % 60
+#         return f"Kniha '{self.title}' budete číst za {hours} hodin a {min} minut."
         
-kniha1 = Book("Jednotlivý záběr", 150, 29.99)
-print(kniha1.get_time_to_read())      # Kniha 'Jednotlivý záběr' budete číst za 10 hodin a 0 minut.
+# kniha1 = Book("Jednotlivý záběr", 150, 29.99)
+# print(kniha1.get_time_to_read())      # Kniha 'Jednotlivý záběr' budete číst za 10 hodin a 0 minut.
+
+
+#----------------------------------- Cvičení 1: Balík podruhé
+# class Package:
+#     def __init__(self, address, weight, state):
+#         self.address = address
+#         self.weight = weight
+#         self.state = state
+    
+#     def __str__(self):   # přejmenuj metodu get_info() na __str__() a vyzkoušej, jestli nyní stačí k získání informací o balíku funkce print().
+#         return(f"Balík na adresu {self.address} má hmotnost {self.weight} kg je ve stavu {self.state}")
+    
+#     def deliver(self):   # bod 2
+#         if self.state == "doručen":
+#             return "Balík již byl doručen"
+#         else:
+#             self.state = "doručen"
+#             return "Doručení uloženo"
+    
+#     def delivery_price(self):
+#         if self.weight <= 10:
+#             return f"Cena přepravy balíku je 129 cze"
+#         elif self.weight < 20:
+#             return f"Cena přepravy balíku je 159 cze"
+#         else:
+#             return f"Cena přepravy balíku je 359 cze"
+            
+# balik1 = Package("Krakovská 583/9, Praha", 0.25, "nedoručen")
+# balik2 = Package("Olšanská 80, Praha", 20.95, "nedoručen")
+# balik3 = Package("Sokolska 36, Olomouc", 11.25, "doručen")
+
+# print(balik1, balik2, balik3)   # Balík na adresu Krakovská 583/9, Praha má hmotnost 0.25 kg je ve stavu nedoručen Balík na adresu Olšanská 80, Praha má hmotnost 20.95 kg je ve stavu nedoručen Balík na adresu Sokolska 36, Olomouc má hmotnost 11.25 kg je ve stavu doručen
+
+# print(balik1.deliver(), balik1)  # Doručení uloženo Balík na adresu Krakovská 583/9, Praha má hmotnost 0.25 kg je ve stavu doručen
+# print(balik3.deliver(), balik3) # Balík již byl doručen Balík na adresu Sokolska 36, Olomouc má hmotnost 11.25 kg je ve stavu doručen
+
+
+#-----------------------------------Bonusy Cvičení 2: Kniha podruhé
+# class Book:
+    
+#     def __init__(self, title, pages, price, sold, cost):
+#         self.title = title
+#         self.pages = pages
+#         self.price = price
+#         self.sold = sold
+#         self.cost = cost
+    
+#     def __str__(self):
+#         return f'Kniha {self.title} má {self.pages} stran a stojí {self.price} Kč'
+    
+#     def get_time_to_read(self, page_minutes = 4):
+#         totat_time = self.pages * page_minutes
+#         hod = totat_time // 60
+#         min = totat_time % 60
+#         return f'Přečtení knihy {self.title} vám zabere {hod} hodiny a {min} minut.'
+    
+#     def profit(self):
+#         return (self.price - self.cost) * self.sold
+
+#     def rating(self):
+#         if self.sold < 50000:
+#             return "propadák"
+#         elif self.sold < 500000:
+#             return "průměr"
+#         else:
+#             return "bestseller"
+        
+# book_1 = Book("Day of the Wipers", 528, 646, 340000, 260)
+# print(f"Zisk z prodeje knihy je {book_1.profit()} Kč.")     # Zisk z prodeje knihy je 131240000 Kč.
+# print(f"Kniha je {book_1.rating()}.")  # Kniha je průměr.
+
+
+#-----------------------------------Bonusy Cvičení 3: Zkušební doba
+# class Employee:
+#     def __init__(self, name, position, probation_period):
+#         self.name = name
+#         self.position = position
+#         self.probation_period = probation_period
+
+#     def __str__(self):
+#         if self.probation_period == "Zkušební doba":
+#            return f"Zaměstnanec {self.name} pracuje na pozici {self.position}. Je ve zkušební době"
+#         return f"Zaměstnanec {self.name} pracuje na pozici {self.position}."
+    
+# frantisek = Employee("Frantisek Novak", "developer", "")
+# elvira = Employee("Elvira Vesela", "front-desck", "Zkušební doba")
+# print(frantisek)  # Zaměstnanec Frantisek Novak pracuje na pozici developer.
+# print(elvira)     # Zaměstnanec Elvira Vesela pracuje na pozici front-desck. Je ve zkušební době
+
+
+#-----------------------------------Bonusy Cvičení 4: Seznam balíků
+# class Package:
+#     def __init__(self, address, weight, state):
+#         self.address = address
+#         self.weight = weight
+#         self.state = state
+    
+#     def delivery_price(self):
+#         if self.weight < 10:
+#             return 129
+#         if self.weight < 20:
+#             return 159
+#         return 359
+    
+#     def deliver(self):
+#         if self.state == "doručen":
+#             return "Balík již byl doručen"
+#         else:
+#             self.state = "doručen"
+#             return "Doručení uloženo"
+
+#     def __str__(self):
+#         return f"Balík na adresu {self.address} má hmotnost {self.weight} kg a je ve stavu {self.state}."
+    
+
+# package_1 = Package("Grimmauldovo náměstí 11", 15, "nedoručen")
+# package_2 = Package("Godrikův důl 47", 3, "nedoručen")
+# package_3 = Package("Vydrník svatého Drába 13", 0.5, "nedoručen")
+# package_list = [package_1, package_2, package_3]
+
+# total_weight = 0
+# total_price = 0
+
+# for item in package_list:
+#     total_weight += item.weight
+#     total_price += item.delivery_price()
+    
+# print(f'Celková hmotnost všech balíků je: {total_weight} kg')        # Celková hmotnost všech balíků je: 18.5 kg
+# print(f"Celková cena za přepravu všech balíků je {total_price} Kč.") # Celková cena za přepravu všech balíků je 417 Kč.
