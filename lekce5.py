@@ -105,34 +105,56 @@
 
 
 #-----------------------------------Bonusy Cvičení 3: Jízdenky a letenky
-
-#DODELAT!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! 
-
-class Ticket:
-    def __init__(self, basic_price, seat_number):
-        self.basic_price = basic_price
-        self.seat_number = seat_number
-    def __str__(self):
-        return f"Cena letenky je: {self.basic_price} kč, a vaše sedadlo čislo: {self.seat_number}"
-class TrainTicket(Ticket):
-    def __init__(self, basic_price, seat_number, fare_class):
-        super().__init__(basic_price, seat_number)  
-        self.fare_class = fare_class
+# class Ticket:
+#     def __init__(self, basic_price, seat_number):
+#         self.basic_price = basic_price
+#         self.seat_number = seat_number
+#     def __str__(self):
+#         return f"Cena letenky je: {self.basic_price} kč, a vaše sedadlo čislo: {self.seat_number}"
+  
+# class TrainTicket(Ticket):
+#     def __init__(self, basic_price, seat_number, fare_class):
+#         super().__init__(basic_price, seat_number)  
+#         self.fare_class = fare_class
     
-    def get_price(self):
-        if self.fare_class == "economy":
-            return super().__str__()
-        else:
-            return f"Cena letenky je: {self.basic_price * 1.3} kč, a vaše sedadlo čislo: {self.seat_number}"
+#     def get_price(self):
+#         if self.fare_class == "economy":
+#             return f"Třída, kterou jste si vybrali, je economy. {super().__str__()}"
+#         else:
+#             return f"Třída, kterou jste si vybrali, je business. Cena letenky je: {self.basic_price * 1.3} kč, a vaše sedadlo čislo: {self.seat_number}"
 
-class PlaneTicket(TrainTicket):
-    def __init__(self, basic_price, seat_number, fare_class, checkout_luggages):
-        super().__init__(basic_price, seat_number, fare_class)
-        self.checkout_luggages = checkout_luggages
-        
-        
-ticket1 = TrainTicket(1000, 12, "economy")
-ticket2 = TrainTicket(1000, 15, "business")
+# class PlaneTicket(TrainTicket):
+#     def __init__(self, basic_price, seat_number, fare_class, checkout_luggages):
+#         super().__init__(basic_price, seat_number, fare_class)
+#         self.checkout_luggages = checkout_luggages
+    
+#     def get_price(self):
+#         if self.fare_class == "economy":
+#             return f"Třída, kterou jste si vybrali, je economy. Cena letenky je: {self.basic_price + self.checkout_luggages * 2000}  kč, a vaše sedadlo čislo: {self.seat_number}"
+#         else:
+#             return f"Třída, kterou jste si vybrali, je business. Cena letenky je: {self.basic_price * 1.5 + self.checkout_luggages * 2000} kč, a vaše sedadlo čislo: {self.seat_number}"
 
-print(ticket1.get_price()) # Cena letenky je: 1000 kč, a vaše sedadlo čislo: 12
-print(ticket2.get_price()) # Cena letenky je: 1300.0 kč, a vaše sedadlo čislo: 15
+
+
+# ticket1 = TrainTicket(1000, 12, "economy")
+# ticket2 = TrainTicket(1000, 15, "business")
+
+# ticket3 = PlaneTicket(150, 7, "economy", 0)
+# ticket4 = PlaneTicket(150, 7, "business", 0)
+
+
+# ticket5 = PlaneTicket(6000, 3, "economy", 1)
+# ticket6 = PlaneTicket(6000, 3, "business", 1)
+
+# total_price = ticket1.get_price() + ticket3.get_price()
+
+# print(ticket1.get_price()) # Třída, kterou jste si vybrali, je economy. Cena letenky je: 1000 kč, a vaše sedadlo čislo: 12
+# print(ticket2.get_price()) # Třída, kterou jste si vybrali, je business. Cena letenky je: 1300.0 kč, a vaše sedadlo čislo: 15
+# print(ticket3.get_price()) # Třída, kterou jste si vybrali, je economy. Cena letenky je: 150  kč, a vaše sedadlo čislo: 7
+# print(ticket4.get_price()) # Třída, kterou jste si vybrali, je business. Cena letenky je: 225.0 kč, a vaše sedadlo čislo: 7
+# print(ticket5.get_price()) # Třída, kterou jste si vybrali, je economy. Cena letenky je: 8000  kč, a vaše sedadlo čislo: 3
+# print(ticket6.get_price()) # Třída, kterou jste si vybrali, je business. Cena letenky je: 11000.0 kč, a vaše sedadlo čislo: 3
+# print(total_price)
+
+
+#-----------------------------------Bonusy Cvičení 4: Audioknihy
