@@ -221,3 +221,87 @@
     
 # print(f'Celková hmotnost všech balíků je: {total_weight} kg')        # Celková hmotnost všech balíků je: 18.5 kg
 # print(f"Celková cena za přepravu všech balíků je {total_price} Kč.") # Celková cena za přepravu všech balíků je 417 Kč.
+
+
+
+#---------------------------------------------------------Soukromé atributy a vlastnosti
+# Dekorátor @property nám umožňuje vytvářet vlastnosti objektů a definovat přístupové metody pro atributy tříd. Je to velmi užitečné, když chceme skrýt detaily implementace atributů a poskytnout pohodlné rozhraní pro přístup k nim.
+# Декоратор @property позволяет нам создавать свойства объектов и определять методы доступа к атрибутам класса. Он очень полезен, когда мы хотим скрыть детали реализации атрибутов и предоставить удобный интерфейс для доступа к ним.
+# Příklad 1: Vytvoření vlastnosti objektu @property decorator nám umožňuje vytvářet vlastnosti objektu. Můžeme například vytvořit třídu Rectangle s atributy width a height. Poté můžeme definovat metodu oblasti, která vrátí oblast obdélníku.
+# class Rectangle:
+#     def __init__(self, width, height):
+#         self.width = width
+#         self.height = height
+    
+#     @property
+#     def area(self):
+#         return self.width * self.height
+
+# w = int(input("Prosím zadejte šířku obdélníku: "))
+# h = int(input("Prosím zadejte výšku obdélníku: "))
+
+# print(f"Plocha obdélníku je: {Rectangle(w, h).area} cm") # Prosím zadejte šířku obdélníku: 5
+#                                                          # Prosím zadejte výšku obdélníku: 10
+#                                                          # Plocha obdélníku je: 50 cm
+
+
+# Příklad 2: Použití metod přístupu k atributům. Dekorátor @property lze také použít k definování přístupových metod pro atributy třídy. Můžeme například definovat třídu Osoba s atributy jména a věku. Poté můžeme definovat metody přístupového objektu jména a věku pomocí dekorátorů @property.getter a @property.setter.
+# class Person:
+#     def __init__(self, name, age):
+#         self.name = name
+#         self.age = age
+#     def __str__(self):
+#         return self.name + " " + self.age
+#     @property
+#     def name(self):
+#         return self._name     # omezit přístup (soukromny atribut)
+    
+#     @name.setter              # se používají k nastavení hodnot atributů.
+#     def name(self, value):
+#         self._name = value
+    
+#     @property
+#     def age(self):
+#         return self._age
+
+#     @age.setter
+#     def age(self, value):
+#         self._age = value
+
+# name = input("Prosím zadejte svoje jmeno: ")
+# age = input("Prosím zadejte svůj věk: ")
+# p = Person(name, age)
+# print(p) # Prosím zadejte svoje jmeno: Alex
+#          # Prosím zadejte svůj věk: 65
+#          # Alex 65
+         
+# p.name = "Oleg"
+# p.age = "15"
+# print(p)  # Oleg 15
+
+
+
+# ---------------------------------------------------------------------- Cvičení: Balík potřetí
+# class Employee:
+#     def __init__(self, first_name, last_name):
+#         self.first_name = first_name
+#         self.last_name = last_name
+
+#     @property
+#     def _name_length(self):
+#         return len(self.first_name + self.last_name)
+
+#     @property
+#     def business_card_data(self):
+#         if self._name_length < 20:
+#             return f"{self.first_name} {self.last_name}"
+#         else:
+#             return f"{self.first_name[0]}. {self.last_name}"
+
+# p = Employee("Alex", "Shilov")
+# print(p.business_card_data) # Alex Shilov
+         
+         
+# p.first_name = "Jan"
+# p.last_name = "Novak"
+# print(p.business_card_data)  # Jan Novak
