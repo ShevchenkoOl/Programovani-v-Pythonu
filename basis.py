@@ -33,11 +33,39 @@ print("Divadlo Pěst na oko \n",  "Vítejte v online rezervaci vstupenek \n", "P
 # text2.rjust(8)       #         5
 # text2.rjust(4,'.')   # ...5
 # text2.center(5, '*') # **5**
-print(list("Ahoj"))   # ['A', 'h', 'o', 'j']
-print("slovo jese odno slovo i tak dalee".split())  # ['slovo', 'jese', 'odno', 'slovo', 'i', 'tak', 'dalee']
-print("slovo / jese odno slovo i / tak dalee".split("/")) # ['slovo ', ' jese odno slovo i ', ' tak dalee']
+# print(list("Ahoj"))   # ['A', 'h', 'o', 'j']
+# print("slovo jese odno slovo i tak dalee".split())  # ['slovo', 'jese', 'odno', 'slovo', 'i', 'tak', 'dalee']
+# print("slovo / jese odno slovo i / tak dalee".split("/")) # ['slovo ', ' jese odno slovo i ', ' tak dalee']
+# print(list("hello")) # ['h', 'e', 'l', 'l', 'o']
+
+# print("this is some random text".upper()) # THIS IS SOME RANDOM TEXT
+# print("ALEX".lower()) # alex
+
+# text1 = "Привет"
+# text2 = "привет"
+# print(text1.casefold() == text2.casefold())  # True ignor registr
+
+# list = ['Hello', 3, 'Good day']
+# list.reverse()
+# print(list)    # ['Good day', 3, 'Hello']
+# print(list[0][:4])  # Good
+
+# # pop() — удаляет последний элемент списка, но внутрь него можно передать номер элемента, который необходимо удалить, и тогда он удалит именно его.
+# # remove() — удаляет конкретный элемент из списка, то есть необходимо указать не индекс, а сам элемент. Если одинаковых элементов несколько, то будет удален только первый из них.
+
+# list.pop(1)
+# list.remove("Good day")
+# print(list)
+
+# list_1 = [1,2,3]
+# list_2 = [4,5,6]
+# list_1 = list_1 + list_2
+# # list_1 += list_2
+# print(list_1)    # [1, 2, 3, 4, 5, 6]
 
 
+# list_1.extend(list_2)
+# print(list_1)   # [1, 2, 3, 4, 5, 6, 4, 5, 6]
 
 # radky = [
 #     [2001, 7.8],
