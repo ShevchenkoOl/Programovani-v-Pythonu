@@ -1,4 +1,20 @@
-#------------------------------Lekce 4 Objektově orientované programování v Pythonu 
+#------------------------------Lekce 4 Objektově orientované programování v Pythonu
+# Základní principy (myšlenky) OOP: 1. zapouzdření (Инкапсуляция, Encapsulation) - omezení přístupu ke komponentám (metodám a proměnným), které tvoří objekt. Zapouzdření zpřístupňuje některé komponenty pouze v rámci třídy.
+# Одиночное подчеркивание в начале имени атрибута говорит о том, что переменная или метод не предназначен для использования вне методов класса, однако атрибут доступен по этому имени
+# class A:
+#         def _private(self):
+#         print("Это приватный метод!")
+# a = A()
+# a._private()
+# Двойное подчеркивание в начале имени атрибута даёт большую защиту: атрибут становится недоступным по этому имени.
+# class B:
+#        def __private(self):
+#       print("Это приватный метод!")
+# b = B()
+# b.__private()
+#                                   2. dědičnost (Inheritance)- dědičnost znamená, že podřízená třída obsahuje všechny atributy nadřazené třídy, i když některé z nich mohou být v podřízené třídě přepsány nebo přidány.
+#                                   3. polymorfismus -pracovat s objekty různých tříd jednotným způsobem
+
 #---------------------------------------Objekty a třídy
 # class Employee:
 #     def __init__(self, name, position, holiday_entitlement):      # __init__ Метод __init__ в Python — это специальный метод, который называется конструктором класса. Он вызывается автоматически при создании нового объекта (экземпляра) этого класса. Основная цель __init__ — инициализация объекта, то есть присваивание начальных значений его атрибутам
